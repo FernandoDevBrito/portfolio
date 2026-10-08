@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://i.imgur.com/2Zpyrep.png" alt="Fernando Augusto Logo" width="120" />
-  <h1>👨‍💻 Fernando Augusto | Full Stack Software Developer</h1>
+  <img src="https://i.imgur.com/2Zpyrep.png" alt="Fernando Brito Logo" width="120" />
+  <h1>👨‍💻 Fernando Brito | Full Stack Software Developer</h1>
   
   <p>
     <strong>Repositório oficial do meu Portfólio Pessoal (v3)</strong><br>
@@ -62,12 +62,12 @@ Como o projeto é totalmente estático e não requer build steps (Node.js/NPM), 
 
 Fique à vontade para explorar o código-fonte! Se quiser bater um papo sobre Engenharia de Dados, Backend, .NET Core, Python ou integrações complexas:
 
-* 💼 **LinkedIn:** [Fernando Augusto](https://www.linkedin.com/in/fernandobrito-dev/)
+* 💼 **LinkedIn:** [Fernando Brito](https://www.linkedin.com/in/fernandobrito-dev/)
 * 🐙 **GitHub:** [@NandinAugusto](https://github.com/NandinAugusto)
 * 📧 **E-mail:** fernando.dev.brito@gmail.com
 
 ---
 
 <div align="center">
-  <small>Projetado e desenvolvido por Fernando Augusto &copy; 2025</small>
+  <small>Projetado e desenvolvido por Fernando Brito &copy; 2025</small>
 </div>
