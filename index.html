@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,7 @@
   <!-- SEO -->
   <title>Fernando Brito - Full Stack Software Developer (.NET 8 / Angular)</title>
   <meta name="description"
-    content="Fernando Brito - Desenvolvedor de Software Full Stack com 4+ anos em ERPs B2B: APIs em C# / .NET 8, SPAs em Angular e TypeScript, SQL Server e RabbitMQ. Aracaju, Brasil. Disponível para trabalho remoto.">
+    content="Fernando Brito - Full Stack Software Developer with 4+ years building B2B ERPs: C# / .NET 8 APIs, Angular and TypeScript SPAs, SQL Server and RabbitMQ. Based in Aracaju, Brazil. Open to remote work.">
   <meta name="author" content="Fernando Brito">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fernandodevbrito.github.io/portfolio/">
@@ -25,17 +25,17 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Fernando Brito - Full Stack Software Developer (.NET 8 / Angular)">
   <meta property="og:description"
-    content="4+ anos entregando ERPs B2B de ponta a ponta: APIs em C# / .NET 8, SPAs em Angular e TypeScript, tuning em SQL Server e mensageria com RabbitMQ.">
+    content="4+ years delivering B2B ERPs end to end: C# / .NET 8 APIs, Angular and TypeScript SPAs, SQL Server tuning and RabbitMQ messaging.">
   <meta property="og:url" content="https://fernandodevbrito.github.io/portfolio/">
   <meta property="og:image" content="https://i.imgur.com/2Zpyrep.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fernando Brito - Full Stack Software Developer (.NET 8 / Angular)">
   <meta name="twitter:description"
-    content="4+ anos entregando ERPs B2B de ponta a ponta: APIs em C# / .NET 8, SPAs em Angular e TypeScript, tuning em SQL Server e mensageria com RabbitMQ.">
+    content="4+ years delivering B2B ERPs end to end: C# / .NET 8 APIs, Angular and TypeScript SPAs, SQL Server tuning and RabbitMQ messaging.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2307070a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='700' font-size='14' fill='%2326d970'>FA</text></svg>">
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2307070a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='700' font-size='14' fill='%2326d970'>FB</text></svg>">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -912,16 +912,11 @@
     i18nEls.forEach(function (el) { I18N[el.dataset.i18n].pt = el.innerHTML; });
 
     let currentLang = 'pt';
-
-    function detectBrowserLang() {
-      const nav = (navigator.language || 'pt').toLowerCase();
-      if (nav.startsWith('en')) return 'en';
-      if (nav.startsWith('es')) return 'es';
-      return 'pt';
-    }
+    // Only a language the visitor picked is saved. New key so old auto-detected 'pt' values are ignored.
+    const LANG_KEY = 'portfolio-lang-choice';
 
     function applyLang(lang) {
-      if (!LANGS.includes(lang)) lang = 'pt';
+      if (!LANGS.includes(lang)) lang = 'en';
       currentLang = lang;
       document.documentElement.lang = LANG_CODES[lang];
 
@@ -932,18 +927,17 @@
       i18nEls.forEach(function (el) { el.innerHTML = I18N[el.dataset.i18n][lang]; });
       document.getElementById('profile-img').alt = IMG_ALT[lang];
       updateCvModalActiveLang(lang);
-
-      try { localStorage.setItem('portfolio-lang', lang); } catch (e) { }
     }
 
     (function () {
       let saved;
-      try { saved = localStorage.getItem('portfolio-lang'); } catch (e) { }
-      applyLang(saved || detectBrowserLang());
+      try { saved = localStorage.getItem(LANG_KEY); } catch (e) { }
+      applyLang(saved || 'en');
     })();
 
     document.getElementById('language-toggle-btn').addEventListener('click', function () {
       applyLang(LANGS[(LANGS.indexOf(currentLang) + 1) % LANGS.length]);
+      try { localStorage.setItem(LANG_KEY, currentLang); } catch (e) { }
     });
 
 
