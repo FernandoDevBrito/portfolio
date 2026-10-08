@@ -62,7 +62,7 @@ Como o projeto é totalmente estático e não requer build steps (Node.js/NPM), 
 
 Fique à vontade para explorar o código-fonte! Se quiser bater um papo sobre Engenharia de Dados, Backend, .NET Core, Python ou integrações complexas:
 
-* 💼 **LinkedIn:** [Fernando Augusto](https://www.linkedin.com/in/fernando-brito-8aa4271a7/)
+* 💼 **LinkedIn:** [Fernando Augusto](https://www.linkedin.com/in/fernandobrito-dev/)
 * 🐙 **GitHub:** [@NandinAugusto](https://github.com/NandinAugusto)
 * 📧 **E-mail:** fernando.dev.brito@gmail.com
 
