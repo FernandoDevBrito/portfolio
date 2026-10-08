@@ -8,7 +8,7 @@
   </p>
 
   <p>
-    <a href="https://nandinaugusto.github.io/portfolio/"><b>🔗 Acessar Portfólio Ao Vivo</b></a>
+    <a href="https://fernandodevbrito.github.io/portfolio/"><b>🔗 Acessar Portfólio Ao Vivo</b></a>
   </p>
 
   <p>
@@ -50,7 +50,7 @@ Como o projeto é totalmente estático e não requer build steps (Node.js/NPM), 
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/NandinAugusto/portfolio.git
+   git clone https://github.com/fernandodevbrito/portfolio.git
    ```
 2. Acesse o diretório:
    ```bash
@@ -63,7 +63,7 @@ Como o projeto é totalmente estático e não requer build steps (Node.js/NPM), 
 Fique à vontade para explorar o código-fonte! Se quiser bater um papo sobre Engenharia de Dados, Backend, .NET Core, Python ou integrações complexas:
 
 * 💼 **LinkedIn:** [Fernando Brito](https://www.linkedin.com/in/fernandobrito-dev/)
-* 🐙 **GitHub:** [@NandinAugusto](https://github.com/NandinAugusto)
+* 🐙 **GitHub:** [@fernandodevbrito](https://github.com/fernandodevbrito)
 * 📧 **E-mail:** fernando.dev.brito@gmail.com
 
 ---
