@@ -292,7 +292,10 @@ header.scrolled {
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
 }
+
+#header-terminal-name:hover { opacity: 1; }
 
 @media (max-width: 768px) {
   #desktop-nav { display: none; }
@@ -962,28 +965,21 @@ footer a:hover { text-decoration: underline; }
   box-sizing: border-box;
 }
 
-/* Odd card out spans the row: diagram left, text right */
-#projects .grid-2 .project-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  flex-direction: row;
-}
+/* Featured project: full width, big diagram on top, text in two columns */
+.project-card--featured { grid-column: 1 / -1; }
+.project-card--featured .project-diagram svg { max-width: 880px; }
+.project-card--featured .diagram-sub { font-size: 7.2px; }
 
-#projects .grid-2 .project-card:last-child:nth-child(odd) .project-diagram {
-  flex: 0 0 42%;
-  border-bottom: 0;
-  border-right: 1px solid var(--border-subtle);
-}
-
-@media (max-width: 768px) {
-  #projects .grid-2 .project-card:last-child:nth-child(odd) {
-    grid-column: 1;
-    flex-direction: column;
+@media (min-width: 769px) {
+  .project-card--featured .project-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    column-gap: var(--sp-12);
   }
-  #projects .grid-2 .project-card:last-child:nth-child(odd) .project-diagram {
-    flex: none;
-    border-right: 0;
-    border-bottom: 1px solid var(--border-subtle);
-  }
+  .project-card--featured .project-body > * { grid-column: 1; }
+  .project-card--featured .project-details { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; }
+  .project-card--featured .project-results { grid-column: 2; grid-row: 3 / span 2; }
 }
 
 .project-card:hover {
@@ -1024,7 +1020,7 @@ footer a:hover { text-decoration: underline; }
 .project-diagram {
   background: #0a0a0f;
   border-bottom: 1px solid var(--border-subtle);
-  padding: var(--sp-6) var(--sp-8);
+  padding: var(--sp-6) var(--sp-5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1047,7 +1043,6 @@ footer a:hover { text-decoration: underline; }
 .project-diagram svg {
   color: var(--accent);
   width: 100%;
-  max-width: 420px;
   height: auto;
   position: relative;
   z-index: 1;
@@ -1237,9 +1232,11 @@ footer a:hover { text-decoration: underline; }
 .stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: var(--sp-12) 0 0;
+  margin: 0;
   border-top: 1px solid var(--border-default);
 }
+
+.stats-section { padding-bottom: 0; }
 
 .stat {
   position: relative;
@@ -1285,6 +1282,10 @@ footer a:hover { text-decoration: underline; }
     padding: var(--sp-4);
     min-height: 140px;
   }
+  /* Keep diagram text readable on phones; the 6-step pipeline shows names only */
+  .project-diagram svg text { font-size: 9.5px; }
+  .project-card--featured .project-diagram svg text { font-size: 11px; }
+  .project-card--featured .diagram-sub { display: none; }
   .project-body {
     padding: var(--sp-5);
   }
